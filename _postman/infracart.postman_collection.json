@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "e79e67e2-bcb8-4cb5-9638-f84a683be653",
+		"name": "infracart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CadastrarCarrinho",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"produto_id\": \"1\",\n\t\"quantidade\": \"3\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho"
+					]
+				},
+				"description": "Cadastra Carrinho com 1 produto."
+			},
+			"response": []
+		},
+		{
+			"name": "CadastraProduto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"produto_id\": \"4\",\n\t\"quantidade\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho",
+						"2"
+					]
+				},
+				"description": "Cadastra 1 produto em 1 carrinho."
+			},
+			"response": []
+		},
+		{
+			"name": "CarrinhoTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho"
+					]
+				},
+				"description": "Pega todos carrinhos."
+			},
+			"response": []
+		},
+		{
+			"name": "CarrinhoProduto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho",
+						"1"
+					]
+				},
+				"description": "Lista todos produtos de um carrinho com valor total."
+			},
+			"response": []
+		},
+		{
+			"name": "DeletaProdutoCarrinho",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"produto_id\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho",
+						"2"
+					]
+				},
+				"description": "Deleta produto de um carrinho."
+			},
+			"response": []
+		},
+		{
+			"name": "AtualizaQuantidadeProdutoCarrinho",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"produto_id\": \"3\",\n\t\"quantidade\": \"5\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/carrinho/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"carrinho",
+						"1"
+					]
+				},
+				"description": "Atualiza quantidade de um produto de um carrinho."
+			},
+			"response": []
+		}
+	]
+}
