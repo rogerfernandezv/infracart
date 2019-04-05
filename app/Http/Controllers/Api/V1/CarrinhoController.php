@@ -9,6 +9,7 @@ use App\Repositories\CarrinhoRepositoryInterface;
 class CarrinhoController extends Controller
 {
 
+    /** @var \App\Repositories\CarrinhoRepositoryInterface  */
     protected $carrinho;
 
     /**
